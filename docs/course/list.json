@@ -1,0 +1,552 @@
+{
+  "code": "200",
+  "message": "操作成功",
+  "data": {
+    "pageNum": 1,
+    "pageSize": 10,
+    "pages": 4,
+    "total": 32,
+    "list": [
+      {
+        "id": "a48d8abf-a173-4e92-86b4-5cafd787e02a",
+        "name": "医学影像学",
+        "thumbnail": "",
+        "type": 0,
+        "teacherName": "李洪波,王海涛",
+        "progress": "100",
+        "homeWorkCount": 4,
+        "term": 6,
+        "examCount": 0,
+        "interactiveScore": "100.0",
+        "homeWorkScore": "100.0",
+        "isPass": 1,
+        "menus": [
+          {
+            "baseId": 72258,
+            "id": "95c0c99d-93f2-4a70-b061-198f0195eabc",
+            "dateCreated": "2021-10-16 11:26:43",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "a48d8abf-a173-4e92-86b4-5cafd787e02a",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 72264,
+            "id": "121f4817-3a24-4ac3-8e8e-844c2ac8d43d",
+            "dateCreated": "2021-10-16 11:26:43",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "a48d8abf-a173-4e92-86b4-5cafd787e02a",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 72267,
+            "id": "3c488393-e359-4826-8653-a37c517dede1",
+            "dateCreated": "2021-10-16 11:26:43",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "a48d8abf-a173-4e92-86b4-5cafd787e02a",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "8f9f314f-7682-4893-9c43-82db59a6440b",
+        "name": "临床药理学",
+        "thumbnail": "doc/a@25D671E6D5AF1889B982648BD2CC183D.jpg",
+        "type": 0,
+        "teacherName": "",
+        "progress": "100",
+        "homeWorkCount": 4,
+        "term": 6,
+        "examCount": 0,
+        "interactiveScore": "100.0",
+        "homeWorkScore": "100.0",
+        "isPass": 1,
+        "menus": [
+          {
+            "baseId": 72615,
+            "id": "e6ceb7bc-a5c4-42a2-9e6a-49b27309ad99",
+            "dateCreated": "2021-10-16 13:22:41",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "8f9f314f-7682-4893-9c43-82db59a6440b",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 72621,
+            "id": "ed6276ce-dc52-4185-8353-a53477753a1a",
+            "dateCreated": "2021-10-16 13:22:42",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "8f9f314f-7682-4893-9c43-82db59a6440b",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 72624,
+            "id": "e4b5e899-fcc8-42ec-af4c-6556d48ffe44",
+            "dateCreated": "2021-10-16 13:22:42",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "8f9f314f-7682-4893-9c43-82db59a6440b",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "c1bd81fd-02f4-460e-800c-4f39d2c258ae",
+        "name": "形势与政策",
+        "thumbnail": "",
+        "type": 0,
+        "progress": "100",
+        "homeWorkCount": 4,
+        "term": 6,
+        "examCount": 0,
+        "interactiveScore": "100.0",
+        "homeWorkScore": "100.0",
+        "isPass": 1,
+        "menus": [
+          {
+            "baseId": 88676,
+            "id": "3bf431bf-37c9-47b9-8272-a13997346f7b",
+            "dateCreated": "2021-11-22 16:31:53",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c1bd81fd-02f4-460e-800c-4f39d2c258ae",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 88682,
+            "id": "92e5f08f-a0d4-414c-b6d6-3cd7471ee358",
+            "dateCreated": "2021-11-22 16:31:53",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c1bd81fd-02f4-460e-800c-4f39d2c258ae",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 88685,
+            "id": "e2d427be-3ae8-429a-8474-5e631a58fa02",
+            "dateCreated": "2021-11-22 16:31:53",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c1bd81fd-02f4-460e-800c-4f39d2c258ae",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "c1ccdeca-4a45-45d4-b732-f1d70925655e",
+        "name": "核医学",
+        "thumbnail": "",
+        "type": 0,
+        "teacherName": "王海涛",
+        "progress": "0",
+        "homeWorkCount": 0,
+        "term": 6,
+        "examCount": 0,
+        "interactiveScore": "0.0",
+        "homeWorkScore": "0.0",
+        "isPass": 1,
+        "menus": [
+          {
+            "baseId": 77666,
+            "id": "d42f6041-c3f2-4ba6-8511-080302ace5af",
+            "dateCreated": "2021-10-24 22:58:25",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c1ccdeca-4a45-45d4-b732-f1d70925655e",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 77672,
+            "id": "262be3d1-867f-4ca4-8a96-166151721e32",
+            "dateCreated": "2021-10-24 22:58:25",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c1ccdeca-4a45-45d4-b732-f1d70925655e",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 77675,
+            "id": "64b1d83d-4cda-4b75-8394-eae6959e0dbe",
+            "dateCreated": "2021-10-24 22:58:25",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c1ccdeca-4a45-45d4-b732-f1d70925655e",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "5cf40088-978c-48fd-987f-4637492822aa",
+        "name": "医学心理学",
+        "thumbnail": "doc/a@7AF3340076069AF587F10B7CF486F1E9.jpg",
+        "type": 0,
+        "teacherName": "",
+        "progress": "100",
+        "homeWorkCount": 0,
+        "term": 6,
+        "examCount": 0,
+        "interactiveScore": "100.0",
+        "homeWorkScore": "0.0",
+        "isPass": 1,
+        "menus": [
+          {
+            "baseId": 74518,
+            "id": "956b8b37-ec03-4daa-b396-38e8a919dbe1",
+            "dateCreated": "2021-10-18 10:18:42",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "5cf40088-978c-48fd-987f-4637492822aa",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 74524,
+            "id": "d709b8bd-1c4f-4e6d-a1e4-76da720ece00",
+            "dateCreated": "2021-10-18 10:18:42",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "5cf40088-978c-48fd-987f-4637492822aa",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 74527,
+            "id": "013cbee4-1951-4740-a8c3-4ae41599ba0a",
+            "dateCreated": "2021-10-18 10:18:42",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "5cf40088-978c-48fd-987f-4637492822aa",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "7d9086c7-d073-4228-8683-3140940bda81",
+        "name": "医学遗传学",
+        "thumbnail": "http://file.sdcen.cn/files/761/963/BE7F0E4BFF1126EF60D3E9EFC6AF0756.png",
+        "type": 0,
+        "teacherName": "郑月红,滕蕾,王海涛",
+        "progress": "100",
+        "homeWorkCount": 4,
+        "term": 5,
+        "examCount": 0,
+        "interactiveScore": "100.0",
+        "homeWorkScore": "100.0",
+        "isPass": 0,
+        "menus": [
+          {
+            "baseId": 91876,
+            "id": "537a5679-5f66-4d3c-bbf1-cd47b5f3fe22",
+            "dateCreated": "2022-02-24 10:07:53",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "7d9086c7-d073-4228-8683-3140940bda81",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 91882,
+            "id": "80e2bafb-aef0-4235-800a-31ba68751b00",
+            "dateCreated": "2022-02-24 10:07:53",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "7d9086c7-d073-4228-8683-3140940bda81",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 91885,
+            "id": "9b2e371a-a9c5-48ff-a6fb-b69c91dd5abc",
+            "dateCreated": "2022-02-24 10:07:53",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "7d9086c7-d073-4228-8683-3140940bda81",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "c376809f-0a63-4277-b6f0-a7f7cc64aa84",
+        "name": "中医学",
+        "thumbnail": "http://dianbo.upol.upc.edu.cn/doc/a@63FAF7D14AB7C599B345ED9585ACE0A7.png?time=1678274285979&token=d3547d58994e6e74b1f615a993daa7f4",
+        "type": 0,
+        "teacherName": "王海涛",
+        "progress": "0",
+        "homeWorkCount": 0,
+        "term": 5,
+        "examCount": 0,
+        "interactiveScore": "0.0",
+        "homeWorkScore": "0.0",
+        "isPass": 0,
+        "menus": [
+          {
+            "baseId": 89159,
+            "id": "16c5cbe9-052c-458f-aa59-1394a6607b34",
+            "dateCreated": "2021-12-08 14:29:22",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c376809f-0a63-4277-b6f0-a7f7cc64aa84",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 89165,
+            "id": "4c607940-8597-4520-b83c-935d26710db5",
+            "dateCreated": "2021-12-08 14:29:22",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c376809f-0a63-4277-b6f0-a7f7cc64aa84",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 89168,
+            "id": "cdd4bf08-670e-4ff5-8f0d-31b749fb77d2",
+            "dateCreated": "2021-12-08 14:29:22",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "c376809f-0a63-4277-b6f0-a7f7cc64aa84",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "cbbb0704-e7af-4442-8f4f-acffc348924a",
+        "name": "中国近现代史纲要",
+        "thumbnail": "",
+        "type": 0,
+        "teacherName": "王海涛",
+        "progress": "100",
+        "homeWorkCount": 4,
+        "term": 5,
+        "examCount": 0,
+        "interactiveScore": "100.0",
+        "homeWorkScore": "100.0",
+        "isPass": 0,
+        "menus": [
+          {
+            "baseId": 92021,
+            "id": "330a0f99-5db5-491f-a04b-dd3ab1126660",
+            "dateCreated": "2022-03-01 08:55:28",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "cbbb0704-e7af-4442-8f4f-acffc348924a",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 92023,
+            "id": "f0e137ff-7ee4-4884-aba0-6bdf215ffeb4",
+            "dateCreated": "2022-03-01 08:55:28",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "cbbb0704-e7af-4442-8f4f-acffc348924a",
+            "baseMenuId": "7EDF2539-383C-4157-8626-0303852D527C",
+            "name": "在线答疑",
+            "url": "MycrouseonlineTalk",
+            "sortOrder": 6
+          },
+          {
+            "baseId": 92027,
+            "id": "14324357-f0d8-4306-9839-7b26b074f7ee",
+            "dateCreated": "2022-03-01 08:55:28",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "cbbb0704-e7af-4442-8f4f-acffc348924a",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 92030,
+            "id": "a56a2756-c6e5-485d-bea8-d03e69b9ad29",
+            "dateCreated": "2022-03-01 08:55:28",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "cbbb0704-e7af-4442-8f4f-acffc348924a",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "cca652f3-8ae2-4a66-ba29-d25dfc9fb81f",
+        "name": "药理学",
+        "thumbnail": "doc/a@B2A8D36B96AC574370735E30A6F667B6.jpg",
+        "type": 0,
+        "teacherName": "",
+        "progress": "100",
+        "homeWorkCount": 4,
+        "term": 5,
+        "examCount": 0,
+        "interactiveScore": "100.0",
+        "homeWorkScore": "100.0",
+        "isPass": 0,
+        "menus": [
+          {
+            "baseId": 72887,
+            "id": "3ea5d872-24cb-43d6-8b5b-c6d86e3616ce",
+            "dateCreated": "2021-10-16 15:02:12",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "cca652f3-8ae2-4a66-ba29-d25dfc9fb81f",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 72893,
+            "id": "0de2ef9c-61f9-47ba-a619-287ebd9021a2",
+            "dateCreated": "2021-10-16 15:02:12",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "cca652f3-8ae2-4a66-ba29-d25dfc9fb81f",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 72896,
+            "id": "98752e37-8b14-4b42-9139-4edc3d63415a",
+            "dateCreated": "2021-10-16 15:02:13",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "cca652f3-8ae2-4a66-ba29-d25dfc9fb81f",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      },
+      {
+        "id": "ce56b960-915f-4fc6-950d-2b7bfbcf380c",
+        "name": "形势与政策",
+        "thumbnail": "",
+        "type": 0,
+        "progress": "100",
+        "homeWorkCount": 4,
+        "term": 5,
+        "examCount": 0,
+        "interactiveScore": "100.0",
+        "homeWorkScore": "100.0",
+        "isPass": 0,
+        "menus": [
+          {
+            "baseId": 88739,
+            "id": "d8b339b5-ecdf-4701-81cd-278ea38ed636",
+            "dateCreated": "2021-11-22 16:32:12",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "ce56b960-915f-4fc6-950d-2b7bfbcf380c",
+            "baseMenuId": "A6AAB28B-8CEB-4CEB-8F7D-015E29775C9A",
+            "name": "课程学习",
+            "url": "CourseStudy",
+            "sortOrder": 5
+          },
+          {
+            "baseId": 88745,
+            "id": "92e345ec-7914-4b72-85b1-db85cbaa45e3",
+            "dateCreated": "2021-11-22 16:32:12",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "ce56b960-915f-4fc6-950d-2b7bfbcf380c",
+            "baseMenuId": "08178641-643D-4B1F-BBD6-180AF5EC7BA5",
+            "name": "在线作业",
+            "url": "MyHomework",
+            "sortOrder": 9
+          },
+          {
+            "baseId": 88748,
+            "id": "e251c456-5d52-4d0f-a31f-c9a9bb02c039",
+            "dateCreated": "2021-11-22 16:32:12",
+            "type": 2,
+            "schoolId": "cbafbe67-5233-4afc-926e-20f798bb88cb",
+            "courseOpenId": "ce56b960-915f-4fc6-950d-2b7bfbcf380c",
+            "baseMenuId": "D4399E9B-2C53-4970-A3CA-05EE7407DECB",
+            "name": "在线考试",
+            "url": "Examination",
+            "sortOrder": 11
+          }
+        ],
+        "examType": "考试课"
+      }
+    ]
+  }
+}
