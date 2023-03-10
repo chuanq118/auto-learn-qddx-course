@@ -1,26 +1,12 @@
 package api
 
 import (
-	"bytes"
-	"encoding/json"
+	"cn.lqservice.qddxCourse/util"
 	"fmt"
 	"log"
 	"os"
 	"testing"
 )
-
-func printFormatJson(v any) {
-	jBytes, err := json.Marshal(v)
-	if err != nil {
-		return
-	}
-	var fmtJson bytes.Buffer
-	err = json.Indent(&fmtJson, jBytes, "", "  ")
-	if err != nil {
-		return
-	}
-	fmt.Printf("%v\n", fmtJson.String())
-}
 
 func TestReqCourseList(t *testing.T) {
 	courses, err := ReqCourseList(&ListCourseReqBody{
@@ -34,7 +20,8 @@ func TestReqCourseList(t *testing.T) {
 		_, _ = fmt.Fprintf(os.Stderr, "Err:: %v\n", err)
 		return
 	}
-	printFormatJson(courses)
+	fmt.Println(util.ToJsonString(courses))
+
 }
 
 func TestReqCourseDirectory(t *testing.T) {
@@ -42,5 +29,5 @@ func TestReqCourseDirectory(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	printFormatJson(dir)
+	fmt.Println(util.ToJsonString(dir))
 }

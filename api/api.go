@@ -2,6 +2,7 @@ package api
 
 import (
 	"bytes"
+	"cn.lqservice.qddxCourse/log"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -30,6 +31,8 @@ var HttpClient = &http.Client{Timeout: (1 << 4) * time.Second}
 const (
 	listCourseURL      = "http://api.jxjyzx.qdu.edu.cn/LearningSpace/list"
 	courseDirectoryURL = "http://api.jxjyzx.qdu.edu.cn/studyLearn/courseDirectoryProcess?courseOpenId="
+	addQueueListURL    = "http://api.jxjyzx.qdu.edu.cn/process/addedQuestionList"
+	leaveCellLogURL    = "http://api.jxjyzx.qdu.edu.cn/studyLearn/leaveCellLog"
 )
 
 // ReqCourseList 请求课程列表
@@ -59,8 +62,36 @@ func ReqCourseDirectory(courseOpenId string) (map[string]interface{}, error) {
 	return sendReqAndParse(request)
 }
 
+func ReqAddQueueList(body *AddQueueReqBody) (map[string]interface{}, error) {
+	marshal, err := json.Marshal(body)
+	if err != nil {
+		log.Logger.Errorln("parse AddQueueReqBody error.")
+		return nil, err
+	}
+	request, err := http.NewRequest("POST", addQueueListURL, bytes.NewBuffer(marshal))
+	if err != nil {
+		return nil, err
+	}
+	setHeaders(request)
+	return sendReqAndParse(request)
+}
+
+func ReqLeaveCellLog(body *LeaveCellLogReqBody) (map[string]interface{}, error) {
+	marshal, err := json.Marshal(body)
+	if err != nil {
+		log.Logger.Errorln("parse ReqLeaveCellLog error.")
+		return nil, err
+	}
+	request, err := http.NewRequest("POST", leaveCellLogURL, bytes.NewBuffer(marshal))
+	if err != nil {
+		return nil, err
+	}
+	setHeaders(request)
+	return sendReqAndParse(request)
+}
+
 func GetAccessToken() string {
-	return "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTA2NTIwMjAyMzA0NjMxIiwiaWQiOiJCNzY1MkZDRS03RkM1LTQyQTgtQTI4MS1DQjJCOTk3QUEyN0QiLCJleHAiOjE2NzgzNTk1OTMsImNyZWF0ZWQiOjE2NzgyNzMxOTMwNTR9.YaUmNdOCcrSsW7O-YmeKq5MCXKxVX3jhoKtWp0NHRur2wKqHq2SRP9xAF2rD_rq-oXOHBiigQO3FvUmmlRVnzQ"
+	return "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTA2NTIwMjAyMzA0NjMxIiwiaWQiOiJCNzY1MkZDRS03RkM1LTQyQTgtQTI4MS1DQjJCOTk3QUEyN0QiLCJleHAiOjE2Nzg1MjcyMDAsImNyZWF0ZWQiOjE2Nzg0NDA4MDA1OTl9._7bWEVYnJzMVqXAzWrBaC9lvDlcUnj45u-GdqgD779xdl6Awt19pxDo_j06N213Mz_sShKrhkffC8hSzPvlC8g"
 }
 
 func setHeaders(req *http.Request) {
@@ -88,7 +119,17 @@ func sendReqAndParse(request *http.Request) (map[string]interface{}, error) {
 			_, _ = fmt.Fprintf(os.Stderr, "reqCourses 解析响应体为JSON失败]\n")
 			return nil, err
 		}
-		return result, nil
+		code, ok := result["code"]
+		if ok {
+			if code.(string) == "200" {
+				return result, nil
+			} else if code.(string) == "401" {
+				log.Logger.Warnln("TOKEN 验证失败,可能需要重新登录.")
+				return nil, fmt.Errorf("%d", 401)
+			}
+		}
+		log.Logger.Errorf("错误的响应信息 -> %v", result)
+		return nil, fmt.Errorf("%s", "invalid response json format.")
 	}
 	return nil, fmt.Errorf("invalid response code %d\n", response.StatusCode)
 }
