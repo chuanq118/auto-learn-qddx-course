@@ -1,3 +1,4 @@
+## Qddx Course
 
 ### 获取所有课程
 
@@ -14,21 +15,21 @@ Content-Type: application/json;charset=UTF-8
 Host: api.jxjyzx.qdu.edu.cn  
 Origin: http://student.jxjyzx.qdu.edu.cn  
 Referer: http://student.jxjyzx.qdu.edu.cn/  
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36  
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
 
 {
-    "isPass": 1,
-    "order": "",
-    "orderField": "",
-    "pageNum": 1,
-    "pageSize": 10
+"isPass": 1,
+"order": "",
+"orderField": "",
+"pageNum": 1,
+"pageSize": 10
 }
 #### 响应
 application/json
 
 
 #### 说明
-![isPass](./isPass.png)
+![isPass](./docs/isPass.png)
 
 
 ### 获取课程目录
@@ -44,7 +45,7 @@ Connection: keep-alive
 Host: api.jxjyzx.qdu.edu.cn  
 Origin: http://student.jxjyzx.qdu.edu.cn  
 Referer: http://student.jxjyzx.qdu.edu.cn/  
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36  
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
 
 #### 响应
 application/json
