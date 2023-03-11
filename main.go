@@ -45,7 +45,7 @@ func main() {
 				}
 				logger.Infof("[进入] 模拟学习小节 -> [%s]\n", topic.Name)
 				for _, cell := range topic.Cells {
-					core.LearnCell(&cell)
+					core.LearnCell(&cell, course.OpenId)
 				}
 			}
 		}
