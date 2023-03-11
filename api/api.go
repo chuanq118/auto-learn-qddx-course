@@ -3,6 +3,7 @@ package api
 import (
 	"bytes"
 	"cn.lqservice.qddxCourse/log"
+	"cn.lqservice.qddxCourse/util"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -28,11 +29,14 @@ const (
 
 var HttpClient = &http.Client{Timeout: (1 << 4) * time.Second}
 
+var accessToken = ""
+
 const (
 	listCourseURL      = "http://api.jxjyzx.qdu.edu.cn/LearningSpace/list"
 	courseDirectoryURL = "http://api.jxjyzx.qdu.edu.cn/studyLearn/courseDirectoryProcess?courseOpenId="
 	addQueueListURL    = "http://api.jxjyzx.qdu.edu.cn/process/addedQuestionList"
 	leaveCellLogURL    = "http://api.jxjyzx.qdu.edu.cn/studyLearn/leaveCellLog"
+	cellDetailURL      = "http://api.jxjyzx.qdu.edu.cn/studyLearn/cellDetail?cellId="
 )
 
 // ReqCourseList 请求课程列表
@@ -76,6 +80,14 @@ func ReqAddQueueList(body *AddQueueReqBody) (map[string]interface{}, error) {
 	return sendReqAndParse(request)
 }
 
+func ReqCellDetail(cellId string) (map[string]interface{}, error) {
+	request, err := http.NewRequest("GET", cellDetailURL+cellId, nil)
+	if err != nil {
+		return nil, err
+	}
+	return sendReqAndParse(request)
+}
+
 func ReqLeaveCellLog(body *LeaveCellLogReqBody) (map[string]interface{}, error) {
 	marshal, err := json.Marshal(body)
 	if err != nil {
@@ -90,8 +102,12 @@ func ReqLeaveCellLog(body *LeaveCellLogReqBody) (map[string]interface{}, error) 
 	return sendReqAndParse(request)
 }
 
-func GetAccessToken() string {
-	return "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTA2NTIwMjAyMzA0NjMxIiwiaWQiOiJCNzY1MkZDRS03RkM1LTQyQTgtQTI4MS1DQjJCOTk3QUEyN0QiLCJleHAiOjE2Nzg1MjcyMDAsImNyZWF0ZWQiOjE2Nzg0NDA4MDA1OTl9._7bWEVYnJzMVqXAzWrBaC9lvDlcUnj45u-GdqgD779xdl6Awt19pxDo_j06N213Mz_sShKrhkffC8hSzPvlC8g"
+func GetAccessToken() *string {
+	return &accessToken
+}
+
+func SetAccessToken(token *string) {
+	accessToken = *token
 }
 
 func setHeaders(req *http.Request) {
@@ -99,7 +115,7 @@ func setHeaders(req *http.Request) {
 	req.Header.Set(contentTypeKey, applicationJsonUtf8)
 	req.Header.Set(referKey, refererVal)
 	req.Header.Set(originKey, originVal)
-	req.Header.Set(accessTokenKey, GetAccessToken())
+	req.Header.Set(accessTokenKey, *GetAccessToken())
 }
 
 func sendReqAndParse(request *http.Request) (map[string]interface{}, error) {
@@ -128,7 +144,7 @@ func sendReqAndParse(request *http.Request) (map[string]interface{}, error) {
 				return nil, fmt.Errorf("%d", 401)
 			}
 		}
-		log.Logger.Errorf("错误的响应信息 -> %v", result)
+		log.Logger.Errorf("错误的响应信息 -> \n%s\n", util.ToJsonString(&result))
 		return nil, fmt.Errorf("%s", "invalid response json format.")
 	}
 	return nil, fmt.Errorf("invalid response code %d\n", response.StatusCode)

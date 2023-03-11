@@ -1,16 +1,21 @@
 package main
 
 import (
+	"cn.lqservice.qddxCourse/api"
 	"cn.lqservice.qddxCourse/core"
 	"cn.lqservice.qddxCourse/log"
 	"go.uber.org/zap"
 )
+
+var token = ""
 
 func main() {
 	defer func(logger *zap.Logger) {
 		_ = logger.Sync()
 	}(log.ZapLogger)
 	logger := log.Logger
+
+	api.SetAccessToken(&token)
 
 	courses, err := core.GetAllCourses(false)
 	if err != nil {
