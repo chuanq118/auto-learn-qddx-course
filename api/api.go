@@ -85,6 +85,7 @@ func ReqCellDetail(cellId string) (map[string]interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
+	setHeaders(request)
 	return sendReqAndParse(request)
 }
 

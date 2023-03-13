@@ -3,13 +3,14 @@ package core
 import (
 	"cn.lqservice.qddxCourse/api"
 	"cn.lqservice.qddxCourse/log"
+	"cn.lqservice.qddxCourse/util"
 )
 
 var logger = log.Logger
 
 // GetAllCourses 解析出所有的课程信息
 func GetAllCourses(pass bool) (courses []*Course, err error) {
-	logger.Infoln("try fetch all pass = ", pass, "courses...")
+	logger.Infoln("try fetch all pass =", pass, "courses...")
 	passNum := 0
 	if pass {
 		passNum = 1
@@ -29,17 +30,23 @@ func GetAllCourses(pass bool) (courses []*Course, err error) {
 			return nil, err
 		}
 		data := courseList["data"].(map[string]any)
-		total := data["total"].(int)
-		list := data["list"].([]map[string]any)
-		for _, jo := range list {
+		total := int(data["total"].(float64))
+		list := data["list"].([]any)
+		for _, v := range list {
+			jo := v.(map[string]any)
+			// json -> 默认为 string,如果该 json 字段不存在则 为 nil
+			teacherName := ""
+			if jo["teacherName"] != nil {
+				teacherName = jo["teacherName"].(string)
+			}
 			courses = append(courses, &Course{
 				OpenId:    jo["id"].(string),
 				Name:      jo["name"].(string),
 				Progress:  jo["progress"].(string),
-				Teachers:  jo["teacherName"].(string),
-				Term:      jo["term"].(int),
+				Teachers:  teacherName,
+				Term:      int(jo["term"].(float64)),
 				Thumbnail: jo["thumbnail"].(string),
-				IsPass:    jo["isPass"].(int),
+				IsPass:    int(jo["isPass"].(float64)),
 			})
 		}
 		// 循环仅在总课程数小于已获取数目时结束
@@ -52,41 +59,54 @@ func GetAllCourses(pass bool) (courses []*Course, err error) {
 
 // GetModulesOfCourse 获取课程的所有章节信息
 func GetModulesOfCourse(courseOpenId string) ([]*Module, error) {
-	logger.Infoln("Try fetch all course directory...")
+	logger.Infoln("Try fetch all course", courseOpenId, "directory...")
 	dir, err := api.ReqCourseDirectory(courseOpenId)
 	if err != nil {
 		return nil, err
 	}
+	defer func() {
+		if p := recover(); p != nil {
+			logger.Errorln("Unexpected error occurred when trying get module of course! Error ->", p)
+			logger.Errorln(util.ToJsonString(dir))
+		}
+	}()
 	logger.Infoln("parsing the course directory json...")
-	moduleList := dir["data"].(map[string]any)["moduleList"].([]map[string]any)
+	moduleList := dir["data"].(map[string]any)["moduleList"].([]any)
 	var modules []*Module
-	for _, module := range moduleList {
+	for _, moduleV := range moduleList {
+		module := moduleV.(map[string]any)
 		var topics []Topic
-		for _, topic := range module["topics"].([]map[string]any) {
+		for _, topicV := range module["topics"].([]any) {
+			topic := topicV.(map[string]any)
 			var cells []Cell
-			for _, cell := range topic["cells"].([]map[string]any) {
+			for _, cellV := range topic["cells"].([]any) {
+				cell := cellV.(map[string]any)
+				if cell["type"] == nil {
+					logger.Warnf("Non type cell ->\n%s\n", util.ToJsonString(cell))
+					continue
+				}
 				cells = append(cells, Cell{
-					Type:        cell["type"].(int),
-					IsLearn:     cell["isLearn"].(int),
+					Type:        int(cell["type"].(float64)),
+					IsLearn:     int(cell["isLearn"].(float64)),
 					Id:          cell["id"].(string),
-					Process:     cell["process"].(int),
-					VideoLength: cell["videoLength"].(int),
+					Process:     int(cell["process"].(float64)),
+					VideoLength: int(cell["videoLength"].(float64)),
 					SubName:     cell["subName"].(string),
 					Name:        cell["name"].(string),
 				})
 			}
 			topics = append(topics, Topic{
 				Name:     topic["name"].(string),
-				Percent:  topic["percent"].(int),
-				Duration: topic["studyTime"].(int),
+				Percent:  int(topic["percent"].(float64)),
+				Duration: int(topic["studyTime"].(float64)),
 				Id:       topic["name"].(string),
 				Cells:    cells,
 			})
 		}
 		modules = append(modules, &Module{
 			Title:    module["name"].(string),
-			Percent:  module["percent"].(int),
-			Duration: module["moduleStudyTime"].(int),
+			Percent:  int(module["percent"].(float64)),
+			Duration: int(module["moduleStudyTime"].(float64)),
 			Topics:   topics,
 		})
 	}

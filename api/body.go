@@ -18,5 +18,5 @@ type AddQueueReqBody struct {
 type LeaveCellLogReqBody struct {
 	Id           string `json:"id"`
 	StopSeconds  int    `json:"stopSeconds"`
-	VideoEndTime int    `json:"videoEndTime"`
+	VideoEndTime int64  `json:"videoEndTime"`
 }
