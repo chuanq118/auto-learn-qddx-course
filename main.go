@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-var token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTA2NTIwMjAyMzA0NjMxIiwiaWQiOiJCNzY1MkZDRS03RkM1LTQyQTgtQTI4MS1DQjJCOTk3QUEyN0QiLCJleHAiOjE2Nzg2OTAyMTgsImNyZWF0ZWQiOjE2Nzg2MDM4MTgwMzF9.069OtaiyxBME79LHhDZ7BTfgSr1VVI-eQeey-wq0dIpxVP1vvanGCeWByGuBRcCy54OQBbiE394BvhaWH_MEZA"
+var token = "your_token"
 
 func main() {
 	defer func(logger *zap.Logger) {

@@ -32,11 +32,11 @@ var HttpClient = &http.Client{Timeout: (1 << 4) * time.Second}
 var accessToken = ""
 
 const (
-	listCourseURL      = "http://api.jxjyzx.qdu.edu.cn/LearningSpace/list"
-	courseDirectoryURL = "http://api.jxjyzx.qdu.edu.cn/studyLearn/courseDirectoryProcess?courseOpenId="
-	addQueueListURL    = "http://api.jxjyzx.qdu.edu.cn/process/addedQuestionList"
-	leaveCellLogURL    = "http://api.jxjyzx.qdu.edu.cn/studyLearn/leaveCellLog"
-	cellDetailURL      = "http://api.jxjyzx.qdu.edu.cn/studyLearn/cellDetail?cellId="
+	listCourseURL      = "http://xxxxxx/LearningSpace/list"
+	courseDirectoryURL = "http://xxxxxx/studyLearn/courseDirectoryProcess?courseOpenId="
+	addQueueListURL    = "http://xxxxxx/process/addedQuestionList"
+	leaveCellLogURL    = "http://xxxxxx/studyLearn/leaveCellLog"
+	cellDetailURL      = "http://xxxxxx/studyLearn/cellDetail?cellId="
 )
 
 // ReqCourseList 请求课程列表
