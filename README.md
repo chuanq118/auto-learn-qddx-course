@@ -7,7 +7,7 @@
 ### 获取所有课程
 
 #### 请求
-POST http://xxxxxx.cn/LearningSpace/list
+POST LearningSpace/list
 
 Accept: application/json, text/plain, */*  
 Accept-Encoding: gzip, deflate  
@@ -30,14 +30,12 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 application/json
 
 
-#### 说明
-![isPass](./docs/isPass.png)
 
 
 ### 获取课程目录
 
 #### 请求
-GET http://xxxxxx.cn/studyLearn/courseDirectoryProcess?courseOpenId={ID}
+GET /studyLearn/courseDirectoryProcess?courseOpenId={ID}
 
 Accept: application/json, text/plain, */*  
 Accept-Encoding: gzip, deflate  
@@ -50,13 +48,13 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 #### 响应
 application/json
 
-#### 说明
+#### 
 
-## 刷课流程
+## process
 
-### 1. 进入课程
+### 1. 
 
-POST http://xxxxxx.cn/process/addedQuestionList  
+POST /process/addedQuestionList  
 
 Accept: application/json, text/plain, */*  
 Accept-Encoding: gzip, deflate  
@@ -73,24 +71,19 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 "courseOpenId": "41b04cdd-c46e-4d2c-b7ad-00de79567557"
 }
 
-### 2. 获取课程详细信息 LogId
+### 2.  LogId
 
 GET http://xxxxxx.cn/studyLearn/cellDetail?cellId=c705fad8-c602-46d5-8df2-e0ed48c609d9  
 
 Accept: application/json, text/plain, */*  
 Accept-Encoding: gzip, deflate  
 Accept-Language: zh-CN,zh;q=0.9,en;q=0.8  
-access-token: eyJhbGciOiJxxxyJzdWIiOiIxMTA2xxxx
-Connection: keep-alive  
-Host: xxxxxx.cn  
-Origin: http://student.jxjyzx.qdu.edu.cn  
-Referer: http://student.jxjyzx.qdu.edu.cn/  
+Connection: keep-alive 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36  
 
 
-### 3. 发送 LeaveLog
+### 3.  LeaveLog
 
-POST http://xxxxxx.cn/studyLearn/leaveCellLog
 
 POST /studyLearn/leaveCellLog HTTP/1.1  
 Accept: application/json, text/plain, */*  
@@ -99,8 +92,6 @@ Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
 Connection: keep-alive  
 Content-Length: 78  
 Content-Type: application/json;charset=UTF-8  
-Host: xxxxxx.cn  
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36  
 access-token: xxxxx
 
 {
